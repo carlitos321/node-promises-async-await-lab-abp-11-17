@@ -26,7 +26,7 @@ class Question {
     console.log("\n")
   }
 
-
+  // FIXME: Implement Promise
   static Find(id){
     console.log(`Waiting for Question ${id} to load...`)
     return new Promise(function(resolve){
@@ -39,10 +39,9 @@ class Question {
     })
   }
 
-
+  // FIXME: Implement async / await
   static Print(id){
-    const question = await Question.Find(id)
-
+    const question = await Question.Find()
     console.log("\n")
     console.log(question.content)
     console.log("\n")
